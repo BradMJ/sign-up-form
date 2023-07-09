@@ -24,6 +24,11 @@ button, input, select, textarea {
     
 }
 
+#left-panel img {
+    height: 100px;
+    width: auto;
+}
+
 #left-panel p {
     color: white;
 }
