@@ -2,6 +2,7 @@ html, body {
     display: block;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html body {
@@ -14,15 +15,6 @@ html body {
 #container {
     display: flex;
 }
-
-/* button, input, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    width: 200px;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-} */
 
 #left-panel {
     position: relative;
@@ -44,9 +36,9 @@ html body {
 
 #left-panel div {
     width: 100%;
-    background-color: rgb(0, 0, 0, 0.4);
+    background-color: rgb(0, 0, 0, 0.3);
     line-height: 2rem;
-    padding: 0 0 0 1.5vw;
+    padding: 0 1vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,20 +56,21 @@ html body {
 #right-panel {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     background-color: rgb(240, 240, 240);
 }
 
 #right-header, #right-footer {
-    padding: 0px 2vw    ;
+    padding: 0px 5vw    ;
 }
 
 #right-nav {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     background-color: rgb(255, 255, 255);
     padding: 1.2rem 2vw 3rem 2vw;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.12);
@@ -87,11 +80,19 @@ html body {
     margin-top: 2rem;
 }
 
+#right-footer > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
     column-gap: 10vw;
+    flex-wrap: wrap;
 }
 
 label {
@@ -155,32 +156,41 @@ button[type='submit']:hover {
 
 
 
-/* @media screen and (max-width: 850px) {
-  
-    .main{
-      flex-direction: column;
+@media screen and (max-width: 850px) {
+    
+    #container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     #left-panel{
-      width: 100vw;
-      height: 20rem;
+        width: 100vw;
+        height: 40vh;
+    }
+
+    #right-panel {
+        width: auto;
     }
   
-    #right-header div, #right-nav, #right-footer div{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    #right-header, #right-nav, #right-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
   
-    #right-form, form, #right-footer {
-      width: 100vw;
-      justify-content: center;
+    #right-nav, form, #right-footer {
+        width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-  }
+}
   
-  @media screen and (max-width: 505px) {
+@media screen and (max-width: 505px) {
     
     label {
-      margin-bottom: 25px;
+        margin-bottom: 25px;
     }
-  } */
+} 
