@@ -20,7 +20,7 @@ html body {
     position: relative;
     width: 40%;
     height: 100vh;
-    background: no-repeat center url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80);
+    background: no-repeat center url(./images/bgStairsImage.jpeg);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -144,18 +144,6 @@ button[type='submit']:hover {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 850px) {
     
     #container{
@@ -163,9 +151,10 @@ button[type='submit']:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: rgb(240, 240, 240);
     }
     #left-panel{
-        width: 100vw;
+        width: 95vw;
         height: 40vh;
     }
 
